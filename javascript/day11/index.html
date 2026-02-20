@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>Day 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>UNIT 3</h1>
+    <h1>JavaScript is single threaded synchronous(step by step)</h1>
+    Javascript is not for heavy compuatraion we need java or c++ for that, js is for web development and it is single
+    threaded,
+    it can do one thing at a time, but it can do it very fast, it can also do multiple things at the same time using
+    asynchronous programming,
+    but it is still single threaded.
+    <h3>what is single threaded multi-threaded</h3>
+    <ul>
+        <li>Single-threaded: A single thread of execution is used to run the program. Only one task can be performed at
+            a time.</li>
+        <li>Multi-threaded: Multiple threads of execution are used to run the program. Multiple tasks can be performed
+            simultaneously.</li>
+    </ul>
+    <h3>what is synchronous and asynchronous</h3>
+    <ul>
+        <li>Synchronous: Tasks are performed one after the other. Each task must wait for the previous task to complete
+            before it can start.</li>
+        <li>Asynchronous: Tasks can be performed independently of each other. A task can start before the previous task
+            has completed, allowing for more efficient use of resources and improved performance.</li>
+    </ul>
+
+    <h1>asynchronous style of coding</h1>
+    We write asynchronous code when the code is of blocking nature ,<b>blocking natures of code</b> - whjen the code is
+    taking too much time to run
+    and it is blocking the execution of other code,
+    for example, when we are making an API call, it is taking time to get the response and it is blocking the execution
+    of other code, in such cases we write asynchronous code to avoid blocking the execution of other code.
+
+
+
+    <p>
+        <code>
+    console.log("start");<br>
+    function dowork(){   <br>
+        console.log("doing work"); <br>
+    }                     <br>
+    dowork();             <br>
+    console.log("end");   <br>
+</code>
+    </p>
+
+    <h1> approaches to write asynchronous code</h1>
+    <ul>
+        <li>Callbacks</li>
+        <li>Promises</li>
+        <li>Async/Await - before fucntion</li>
+        <li>some functions are default like - set time out </li>
+    </ul>
+
+    set timeout is a default function in js which is used to execute a function after a specified time,
+    it is an asynchronous function, it takes two parameters, first is the function to be executed and second is the time
+    in milliseconds after which the function should be executed.
+    <P>
+        setTimeout(function(){ <br>
+        console.log("hello"); <br>
+        }, 2000); <br>
+    </P>
+
+
+    <p>
+        <code>
+    console.log("start");<br>
+    function dowork(){   <br>
+        setTimeout( () => {   <br>
+            console.log("doing work"); <br>
+        }, 3000);             <br>
+    }                     <br>
+    dowork();             <br>
+    console.log("end");   <br>
+</code>
+    </p>
+    <img src="day11\image.png" alt="image">
+
+    <h1>QUESTION 1-WHY WE NEED ASCHYNOROUS TYPE OF CODING </h1>
+    <ul>
+        <li>To avoid blocking the execution of other code while waiting for a long-running task to complete.</li>
+        <li>So our apps and websites don't freeze while waiting for slow tasks to finish. </li>
+        <li>To improve the performance and responsiveness of applications by allowing multiple tasks to run
+            concurrently.,
+            Asynchronous coding is essential to keep applications responsive and efficient by allowing long-running
+            tasks—such as API requests,
+            database queries, or file I/O—to run in the background without freezing the main thread or user interface
+        </li>
+    </ul>
+    <h1>WHAT IS CALL BACK FUNCTION - AND HOW WE CAN USE IT TO GRAB CALL</h1>
+    A callback function is a function that is passed as an argument to another function and is executed after the completion of that function. 
+    It is a way to handle asynchronous operations in JavaScript. 
+    When an asynchronous operation is performed, the callback function is called once the operation is complete,
+    allowing us to grab the result or status of that operation.
+    
+
+
+
+
+
+
+    setinterval is also a default function in js which is used to execute a function repeatedly after a specified time,
+    it takes two parameters,
+    first is the function to be executed and second is the time in milliseconds after which the function should be
+    executed.
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
