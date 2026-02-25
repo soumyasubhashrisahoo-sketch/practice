@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>excecuation and contexts</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <p>
+<code>
+    var a = 10;
+    function abc(num){
+        var res = num = num;
+        return res;
+
+    }
+
+    let answer1 = abc(a);
+    console.log(answer1);
+    let answer2 = abc(20);
+    console.log(answer2);
+</code>
+
+</p>
+
+
+as this willrun 
+a context will be formed 
+called global exceution context -- a container will be formed that will be divided into two parts
+1. memory heap - where all the variables and functions are stored
+and in this context a variable a is created and assigned value 10
+
+
+
+<h1>what is call stack?</h1>
+<p>
+    call stack is a data structure that keeps track of the function calls in a program.
+    <br> it is used to manage the execution of functions and to keep track of the order in which they are called. <br>
+    when a function is called, a new execution context is created and pushed onto the call stack. when the function finishes executing, its execution context is popped off the stack and control is returned to the previous context.
+</p>
+
+<h1>what expensive for loop ?</h1>
+an expensive for loop is a loop that takes a long time to execute, 
+<br>it can be caused by a large number of iterations or by complex operations inside the loop.<br>
+ it can also be caused by a loop that is not optimized, such as a loop that is not using the correct data structure or that is not using the correct algorithm. 
+ <br>an expensive for loop can cause performance issues and can make the program slow.
+<h1>what is global execution context?</h1>
+the global execution context is the default execution context in JavaScript. it is created when the JavaScript engine starts executing a script and it contains all the global variables and functions defined in the script. it is also known as the global scope.
+<h1>what is local execution context?</h1>
+the local execution context is created when a function is called. it contains all the variables and functions defined within that function. it is also known as the function scope. each time a function is called, a new local execution context is created and pushed onto the call stack.
+<h1>what is memory heap?</h1>
+the memory heap is a region of memory where all the variables and functions are stored. it is used to store the data that is needed for the execution of the program. it is also used to store the objects and arrays that are created during the execution of the program.
+<h1>what is event loop?</h1>
+the event loop is a mechanism that allows JavaScript to perform non-blocking operations. it is responsible for managing the execution of asynchronous code and for ensuring that the main thread is not blocked while waiting for long-running tasks to complete. the event loop continuously checks the call stack and the task queue, and it executes any tasks that are in the task queue when the call stack is empty.
+<h1>what is blocking and non blocking in backend - sync is blocking , async is non blocking </h1>
+
+</body>
+</html>
